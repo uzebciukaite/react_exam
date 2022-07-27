@@ -1,0 +1,365 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 900px;
+  background: #dcdbdb;
+}
+.homepage,
+.register,
+.login {
+  width: 90%;
+  height: 600px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+  background: #f7f7f7;
+  border-radius: 15px;
+}
+
+.register p {
+  width: 50%;
+  text-align: center;
+}
+
+.homepage > div {
+  width: 50%;
+  height: 60px;
+  text-align: end;
+  gap: 30px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.homepage > div button {
+  width: 50%;
+}
+
+input {
+  width: 80%;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 20px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+}
+
+.toolbar {
+  width: 100%;
+  height: 80px;
+}
+
+.toolbar > div {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile {
+  width: 90%;
+  margin: 40px auto;
+  height: 600px;
+  border-radius: 15px;
+  background: #f7f7f7;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grow1 {
+  flex: 1;
+}
+
+.profileimg {
+  flex: 1;
+  display: flex;
+  padding: 0 10px;
+}
+.profileimg img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin: auto;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.profileright {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.profileright button {
+  width: 60%;
+}
+
+.allusers {
+  width: 90%;
+  margin: 40px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.allusers > div {
+  width: 30%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  background: #f7f7f7;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.allusers > div img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.chat-modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modaltext {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+button {
+  margin: 0 10px;
+  background: linear-gradient(to bottom right, #ef4765, #ff9a5a);
+  border: 0;
+  border-radius: 12px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  transition: box-shadow 0.2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+button:not([disabled]):focus {
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5),
+    -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5),
+    0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+button:not([disabled]):hover {
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5),
+    -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5),
+    0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.conversation {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+.inputtext {
+  position: absolute;
+  background: #dcdbdb;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 15px 15px;
+  gap: 40px;
+  margin-bottom: 10px;
+}
+
+.sendIcon {
+  width: 50px;
+  height: 50px;
+  background: #ef4765;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6em;
+  border-radius: 50%;
+  color: white;
+}
+
+.chatcontainer {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  overflow: auto;
+}
+
+.innermessage {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+}
+.singlemessage {
+  width: 80%;
+  min-height: 60px;
+  display: flex;
+}
+
+.singlemessage img {
+  margin-right: 10px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.sendermsg {
+  justify-content: flex-end;
+}
+
+.sendermsg > div,
+.receivermsg > div {
+  width: 70%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.sendermsg > div {
+  background: #f74a6a9f;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+.receivermsg > div {
+  background: #ff995a95;
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+
+.userchatcont {
+  width: 100%;
+  height: 500px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px auto;
+  padding: 30px 0;
+  gap: 20px;
+}
+
+.chatcard {
+  width: 80%;
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  font-size: 1em;
+  border-radius: 15px;
+  background: #f7f7f7;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.chatcard > div {
+  display: flex;
+}
+
+.deleteconversation {
+  font-weight: bold;
+  background: #ef4765;
+  padding: 10px 15px;
+  border-radius: 50%;
+}
